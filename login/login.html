@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Phil's Demo</title>
+    <title>Please Log-in</title>
 <!--- include firebase files-->
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
@@ -36,7 +36,7 @@
 <body>
     <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
-    <h1>Welcome to Phil's App</h1>
+    <h1 id="loginTitle">Welcome to Team 15 Web App</h1>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
     <script>
@@ -58,7 +58,7 @@
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: 'main.html',
+  signInSuccessUrl: './main.html',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -69,12 +69,19 @@
     // firebase.auth.PhoneAuthProvider.PROVIDER_ID
   ],
   // Terms of service url.
-  tosUrl: 'main.html',
+  tosUrl: './main.html',
   // Privacy policy url.
-  privacyPolicyUrl: 'main.html'
+  privacyPolicyUrl: './main.html'
 };
     // The start method will wait until the DOM is loaded.
     ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $("#loginTitle").css("textAlign","center");
+    $("#loginTitle").css("color","#654321");
+    $("body").css("backgroundColor","#FFFFF0");
+  </script>
 </body>
 </html>

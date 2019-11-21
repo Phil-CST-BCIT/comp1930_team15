@@ -18,18 +18,18 @@
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
             // Your web app's Firebase configuration
-            var firebaseConfig = {
-              apiKey: "AIzaSyBlz3AEgN7deWD9SUjmIBUttZEqSiu_faE",
-              authDomain: "demooct31.firebaseapp.com",
-              databaseURL: "https://demooct31.firebaseio.com",
-              projectId: "Demooct31",
-              storageBucket: "Demooct31.appspot.com",
-              messagingSenderId: "338087132574",
-              appId: "1:338087132574:web:ad3cb0470ba5ba2d53ea8f"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-          </script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyBsejeY9Vba5j776F3GHGrVuCJ0ylCPA9c",
+    authDomain: "phil-nov7.firebaseapp.com",
+    databaseURL: "https://phil-nov7.firebaseio.com",
+    projectId: "phil-nov7",
+    storageBucket: "phil-nov7.appspot.com",
+    messagingSenderId: "586967847187",
+    appId: "1:586967847187:web:7f55983df0afb61f600ae6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>
           
 </head>
 <body>
@@ -41,8 +41,7 @@
     <script>
     // Initialize the FirebaseUI Widget using Firebase.
     var ui = new firebaseui.auth.AuthUI(firebase.auth()); 
-    var uiConfig = {
-  callbacks: {
+    var uiConfig = { callbacks: {
     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
       // User successfully signed in.
       // Return type determines whether we continue the redirect automatically

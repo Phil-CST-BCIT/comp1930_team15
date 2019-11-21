@@ -1,0 +1,12 @@
+body{
+      background-image: url("./images/2560x1440-ivory-background.jpg"); background-repeat:repeat;
+      }
+      .header{
+      color:brown;
+      font-weight:bold;
+      font-size: 150%;
+      }
+      #logged-in{
+        display:none;
+        
+      }

@@ -1,5 +1,6 @@
 body{
-      background-image: url("./images/2560x1440-ivory-background.jpg"); background-repeat:repeat;
+      background-color: url("./images/2560x1440-ivory-background.jpg"); 
+      background-repeat:repeat;
       }
       .header{
       color:brown;

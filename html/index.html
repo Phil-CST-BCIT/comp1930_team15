@@ -14,6 +14,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+    <!-- Optional styles and scripts of your own -->
+  
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script> -->
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script> -->
+
+  <!-- The Firebase Authentication UI Library -->
+  <!-- <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script> -->
+
+  <!-- This is the configuration that connects my web files to my firebase project -->
+  <!-- <script src="./Scripts/firebase_config_Ciro.js"></script> -->
+  <!-- <script>var firebaseConfig = {
+    
+      // Your API stuff goes here;  get it from firebase console
+      
+    };
+    
+    // Initialize Firebase
+    // Henceforce, any reference to the database can be made with "db"
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();</script> -->
+
 </head>
 
 <body style="background-color:antiquewhite">
@@ -76,12 +104,30 @@
   </div>
 </div>
 
-      
-              
-        
+
         <script>
-    function log(){ window.location.href="../login.html";
+    function log(){ window.location.href="../comp1930_team15/login/login.html";
     }</script>
+    <!-- <script>
+    function createUser() {
+
+// if the current user logged in user
+// is authenticated, then grab "uid" "displayName" and "email"
+// use "set()" with merge (if document did not exist it will be created)
+firebase.auth().onAuthStateChanged(function(user){
+  console.log(user);
+    db.collection("User").doc(User.uid).set(
+  {
+    "Username":user.displayName, 
+     "Email":user.email,
+    },{ merge: true });
+});
+}
+
+    createUser();
+
+    </script> -->
+
 </body>
 
 </html>

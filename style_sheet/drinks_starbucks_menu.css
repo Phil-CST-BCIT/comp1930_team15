@@ -1,0 +1,41 @@
+body{
+  height:667px;
+  width:375px;  
+  display:grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  background-color: #FFFFF0;
+  border:solid;
+}
+header{
+  margin: 0px;
+  padding: 0px;
+  background-color:white;
+  width:375px;
+}
+#hTable{
+  width:100%;
+  margin-left: 0%;
+  margin-top:2%;
+}
+#appName{
+margin-left:12%}
+
+#hamburger{
+  width:20px;
+  height:20px;
+  border:solid;
+  border-color: grey;
+  border-radius:15%;
+  margin-left: 10px;
+}
+#logo{
+  margin-left:85%;
+  margin-top: 0%;
+}
+
+#logoImg{
+  width:30px;
+  height:30px;
+  align-content: center;
+}
+

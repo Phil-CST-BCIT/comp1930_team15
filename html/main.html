@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>you have logged-in now!</title>
+    <title>Welcome Back!</title>
     <link rel="stylesheet" href="../team15_style.css">
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,6 +19,7 @@
       // Your web app's Firebase configuration
       var firebaseConfig = {
         apiKey: "AIzaSyBlz3AEgN7deWD9SUjmIBUttZEqSiu_faE",
+        //make sure only pointing to one base
         authDomain: "demooct31.firebaseapp.com",
         databaseURL: "https://demooct31.firebaseio.com",
         projectId: "demooct31",
@@ -29,49 +30,61 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       var db = firebase.firestore();
-      
-      
     </script>
+    
+<!--
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+-->
+    
+    <link rel="stylesheet" type="text/css" href="../style_sheet/drinks_starbucks_menu.css"/>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="header"><span id="you"></span> Welcome!</div>
-      <a class="navbar-brand" href="#!"><img src="../images/logo.jpg" width="70px"></a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="logged-in" href="#!">Logged-in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Logout</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">my account</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">
-              <div><span id="email"></span></div>
-            </a>
-          </li>
+    <header>
+      <table id="hTable">
+        <tbody>
+          <tr>
+            <td id="dropDownMenu"><img id="hamburger" src="../images/hamburger1.png"></td>
+            <td id="appNameTD"><img id="appName" src="../images/Appname.png"></td>
+            <td id="logo"><img id="logoImg" src="../images/logo.jpg"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <ul id="twoMeals">
+          <li><a id="getBreakfast" href="">Breakfast</a></li>
+          <li><a id="getLunch" href="">Lunch</a></li>
+          <li><a id="getMyInformation" href="">History</a></li>
         </ul>
       </div>
-    </nav>
-    <div class="float-sm-left"><img src="../images/starbucks-coffee-icon-logo-png_44610.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
-    <div class="float-sm-left"><img src="../images/tim.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
-    <div class="float-sm-left"><img src="../images/starbucks-coffee-icon-logo-png_44610.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
-    <div class="float-sm-left"><img src="../images/tim.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
-    <scrpit src="scprits_phil/app.js"></scrpit>
-    <script src="scprits_phil/create_user.js"></script>
-    <script>
-      createUser();
-      showName();
-    </script>
+      <div><p class="recommendation">Recommendation to you!</p></div>
+    </header>
+    <div class="menuBody">
+      <table id="burgersTable">
+        <tbody>
+          <td id="bigMac"><img class="foodImg" alt="" src="../images/big_mac.jpg"></td>
+          <td id="nuggets"><img class="foodImg" alt="" src="../images/chicken.jpg"></td>
+        </tbody>
+      </table>
+      <table id="drinksTable">
+        <tbody>
+          <td id="tea"><img class="foodImg" alt="" src="../images/tea.jpg"></td>
+          <td id="salad"><img class="foodImg" alt="" src="../images/salad.jpg"></td>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <div id="displayArea"></div>
+      <table id="terms">
+        <tbody>
+          <tr>
+            <td>Privacy Policy </td>
+            <td>Terms&#38Conditions </td>
+            <td>Accessibility</td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/drinks_client.js"></script>
   </body>
 </html>

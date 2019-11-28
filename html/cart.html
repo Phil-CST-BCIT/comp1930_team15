@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+  <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+    integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+    integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous">
+  </script>
+  <style>
+    .shop {
+      width: 375px;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    .shop2 {
+      text-align: center;
+      clear: both;
+      border: 1px solid black;
+      height: 21px;
+    }
+
+    .goods {
+      float: left;
+      width: 100px;
+    }
+
+    .price {
+      float: left;
+      width: 50px;
+    }
+
+    .number {
+      float: left;
+      width: 110px;
+    }
+
+    .subtotal {
+      float: left;
+      width: 50px;
+      margin-top: 2px;
+    }
+
+    .delete {
+      float: left;
+      width: 35px;
+      margin-left: 5px;
+    }
+
+    .text {
+      width: 22px;
+      text-align: center;
+    }
+  </style>
+<script>
+    //+function
+    function add(text,price,subtotal){
+      //read the number value of the text field
+      var num=document.getElementById(text).value;
+      //add one number and then assign it back to the text value.
+      ++num;
+      document.getElementById(text).value=num;
+      //calculate the subtotal of the item and assign it back.
+      var price=document.getElementById(price).innerHTML;
+      // debug why the add function didn work--> var subtotal=price*num;
+      document.getElementById(subtotal).innerHTML=price*num;
+    }
+
+    //-function
+    function minus(text,price,subtotal){
+      var num=document.getElementById(text).value;
+      //if num is negative
+      if(num < 1){
+        num = 0;
+        // document.getElementById(text).value=0;
+      }else{
+        document.getElementById(text).value=num
+        num--;
+        document.getElementById(text).value=num
+        }
+      //read the quantity from the text field.
+      //给num重新赋值是放置出现num=-1情况
+      // num=document.getElementById(text).value;
+      var pricea=document.getElementById(price).innerHTML;
+      document.getElementById(subtotal).innerHTML=pricea*num;
+    }
+    
+    //while user selects the quantity and tries to change it.
+    function change(text,price,subtotal){
+      //judge if the input is valid
+       var test = document.getElementById(text).value;
+      if(isNaN(test)||test<0||test%1 !== 0){
+        alert("Please enter a number");
+        document.getElementById(text).value=1;
+      }
+      //get the field value
+      var num=document.getElementById(text).value;
+      //get the price of price filed
+      var price=document.getElementById(price).innerHTML;
+      //change the subtotal
+      document.getElementById(subtotal).innerHTML=price*num;
+    }
+    function remove(shop){
+      //delete the sepecifiy shop
+      document.body.removeChild(document.getElementById(shop));
+    }
+    </script>
+</head>
+
+<body style="background-color:ivory">
+
+  <!-- navigation bar 下拉菜单menu login tbd->> logout需要设定在login后出现-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button><img align='center' id="logo" style="width:100px" src="./images/Cart.png" />
+    <a class="navbar-brand" href="#!"><img src="./images/logo.jpg" width="40px" height="40px"></a>
+    <!-- roll down options-->
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div><button type="button" class="btn btn-primary" type="submit" style="position:absolute; left:5%; bottom: 50%;";>Process to Payment</button></div>
+    
+  <div class="shop">
+      <div class="title">Cart</div>
+      <div class="goods">Item(s)</div>
+      <div class="price">Price</div>
+      <div class="number">Quantity</div>
+      <div class="subtotal">Subtotal</div>
+      <div class="delete"></div>
+    </div>
+    <!--商品内容-->
+    <div class="shop2" id="shop2">
+      <form>
+      <div class="goods">SamSung </div>
+      <div class="price" id="price2">5000</div>
+      <div class="number">
+        <input type="button" value="-" onclick="minus('text2','price2','subtotal2')"/>
+        <input type="text" value="1" class="text" id="text2" onblur="change('text2','price2','subtotal2')"/>
+        <input type="button" value="+" onclick="add('text2','price2','subtotal2')"/>
+      </div>
+      <div class="subtotal" id="subtotal2">5000</div>
+      <div class="delete" onclick="remove('shop2')"><a href="#">delete</a></div>
+      <form>
+    </div>
+
+    <div class="shop2" id="shop3">
+      <form>
+      <div class="goods">iphone 8</div>
+      <div class="price" id="price3">6000</div>
+      <div class="number">
+        <input type="button" value="-" onclick="minus('text3','price3','subtotal3')"/>
+        <input type="text" value="1" class="text" id="text3" onblur="change('text3','price3','subtotal3')"/>
+        <input type="button" value="+" onclick="add('text3','price3','subtotal3')"/>
+      </div>
+      <div class="subtotal" id="subtotal3">5000</div>
+      <div class="delete" onclick="remove('shop3')"><a href="#">delete</a></div>
+      <form>
+    </div> 
+    <div style="clear: both; position: fixed; top:30%"><form>
+      <div>Subtotal<span ></span></div>
+      <div>Tax</div>
+      <div>Deliver</div>
+      <div>Order Total</div>
+      <div></div>
+    </form></div>
+</body>
+</html>

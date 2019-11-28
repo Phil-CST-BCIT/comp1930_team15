@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome Back!</title>
-    <link rel="stylesheet" href="./style_sheet/drinks_starbucks_menu.css">
+    <link rel="stylesheet" href="./style_sheet/main.css">
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,19 +15,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyBlz3AEgN7deWD9SUjmIBUttZEqSiu_faE",
-        //make sure only pointing to one base
-        authDomain: "demooct31.firebaseapp.com",
-        databaseURL: "https://demooct31.firebaseio.com",
-        projectId: "demooct31",
-        storageBucket: "demooct31.appspot.com",
-        messagingSenderId: "338087132574",
-        appId: "1:338087132574:web:ad3cb0470ba5ba2d53ea8f"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
       var db = firebase.firestore();
     </script>
     
@@ -35,7 +22,7 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 -->
     
-    <link rel="stylesheet" type="text/css" href="../style_sheet/drinks_starbucks_menu.css"/>
+    <link rel="stylesheet" type="text/css" href="./style_sheet/drinks_starbucks_menu.css"/>
   </head>
   <body>
     <header>
@@ -53,6 +40,7 @@
           <li><a id="getBreakfast" href="">Breakfast</a></li>
           <li><a id="getLunch" href="">Lunch</a></li>
           <li><a id="getMyInformation" href="">History</a></li>
+          <li><a id="cart" href="./cart.html">Go to cart</a></li>
         </ul>
       </div>
       <div><p class="recommendation">Recommendation to you!</p></div>
@@ -60,14 +48,14 @@
     <div class="menuBody">
       <table id="burgersTable">
         <tbody>
-          <td id="bigMac"><img class="foodImg" alt="" src="./images/big_mac.jpg"></td>
-          <td id="nuggets"><img class="foodImg" alt="" src="./images/chicken.jpg"></td>
+          <td id="bigMac"><a href=""><img class="foodImg" alt="" src="./images/big_mac.jpg"></a></td>
+          <td id="nuggets"><a href=""><img class="foodImg" alt="" src="./images/chicken.jpg"></a></td>
         </tbody>
       </table>
       <table id="drinksTable">
         <tbody>
-          <td id="tea"><img class="foodImg" alt="" src="./images/tea.jpg"></td>
-          <td id="salad"><img class="foodImg" alt="" src="./images/salad.jpg"></td>
+          <td id="tea"><a href=""><img class="foodImg" alt="" src="./images/tea.jpg"></a></td>
+          <td id="salad"><a href=""><img class="foodImg" alt="" src="./images/salad.jpg"></a></td>
         </tbody>
       </table>
     </div>
@@ -84,6 +72,6 @@
       </table>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../js/drinks_client.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -76,7 +76,7 @@
   
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button><img id="logo" style="position: absolute; left:20%" src="../images/Appname.png"/>
+        </button><img align='center' id="logo" src="../images/Appname.png"/>
         <a class="navbar-brand" href="#!"><img src="../images/logo.jpg" width="40px" height="40px"></a>
       <!-- roll down options-->
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -93,7 +93,7 @@
           </ul>
         </div>
       </nav>
-      <p id="username">User login welcome </p>
+      <div align='center'>Welcome!, <span id="username">User login welcome </span></div>
       <!-- 旧的中心按钮表格 <form>
           <div class="btn-group-vertical" role="group" aria-label="Basic example">
               <div id="loginMenu">
@@ -127,7 +127,7 @@
     </div>
     
 
-<!-- Modal -->
+<!-- Modal what is this??-->
 <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -138,7 +138,6 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -151,7 +150,6 @@
         <script>
     function log(){ window.location.href="../comp1930_team15/login/login.html";
     }</script>
-
      <script>
       firebase.auth().onAuthStateChanged(function (user) {
         db.collection('User').doc(user.uid).onSnapshot(function(snap){
@@ -159,18 +157,7 @@
          });
     });
         </script>
-         <script>
-          function createUser() {
-              firebase.auth().onAuthStateChanged(function(user){
-                  db.collection("User").doc(user.uid).set(
-                {
-                  "username":user.displayName,
-                   "Email":user.email,
-                  },{ merge: true });
-              });
-          }
-          createUser();
-        </script>
+         
     <!-- <script>
     function createUser() {
 

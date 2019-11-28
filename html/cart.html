@@ -17,7 +17,7 @@
   </script>
   <style>
     .shop {
-      width: 400px;
+      width: 375px;
       background-color: #f0f0f0;
       text-align: center;
     }
@@ -62,57 +62,63 @@
     }
   </style>
 <script>
-    //按下+按钮
+    //+function
     function add(text,price,subtotal){
-      //取出当前页面的数量
+      //read the number value of the text field
       var num=document.getElementById(text).value;
-      //将数量加一然后再赋值给显示数量的<inpue>中的value属性
+      //add one number and then assign it back to the text value.
       ++num;
       document.getElementById(text).value=num;
-      //取出当前页面的数量，与数量相乘，赋值给小计所属的div的页面显示内容
+      //calculate the subtotal of the item and assign it back.
       var price=document.getElementById(price).innerHTML;
-      var subtotal=price*num;
+      // debug why the add function didn work--> var subtotal=price*num;
       document.getElementById(subtotal).innerHTML=price*num;
     }
-    //按下-按钮
+
+    //-function
     function minus(text,price,subtotal){
       var num=document.getElementById(text).value;
-      //判断数量是不是负数
-      if(--num<1){
-        document.getElementById(text).value=0;
+      //if num is negative
+      if(num < 1){
+        num = 0;
+        // document.getElementById(text).value=0;
       }else{
         document.getElementById(text).value=num
+        num--;
+        document.getElementById(text).value=num
         }
-      //取出当前页面的数量，与数量相乘，赋值给小计所属的div的页面显示内容
+      //read the quantity from the text field.
       //给num重新赋值是放置出现num=-1情况
-      var num=document.getElementById(text).value;
-      var price=document.getElementById(price).innerHTML;
-      document.getElementById(subtotal).innerHTML=price*num;
+      // num=document.getElementById(text).value;
+      var pricea=document.getElementById(price).innerHTML;
+      document.getElementById(subtotal).innerHTML=pricea*num;
     }
-    //用户在<input>框中改变数字时，光标失焦后触发change()函数	
+    
+    //while user selects the quantity and tries to change it.
     function change(text,price,subtotal){
-      //判断用户输入的是否为非数字，是则提醒用户
-      if(isNaN(document.getElementById(text).value)){
-        alert("请输入数字");
+      //judge if the input is valid
+       var test = document.getElementById(text).value;
+      if(isNaN(test)||test<0||test%1 !== 0){
+        alert("Please enter a number");
         document.getElementById(text).value=1;
       }
-      //取得id="text"的input框的value值
+      //get the field value
       var num=document.getElementById(text).value;
-      //取得商品价格
+      //get the price of price filed
       var price=document.getElementById(price).innerHTML;
-      //将小计输出出去
+      //change the subtotal
       document.getElementById(subtotal).innerHTML=price*num;
     }
-    function delect(shop2){
-      //删除id="shop"的这个div
-      document.body.removeChild(document.getElementById(shop2));
+    function remove(shop){
+      //delete the sepecifiy shop
+      document.body.removeChild(document.getElementById(shop));
     }
     </script>
 </head>
 
 <body style="background-color:antiquewhite">
 
-  <!-- navigation bar 下拉菜单menu login logout需要设定在login后出现-->
+  <!-- navigation bar 下拉菜单menu login tbd->> logout需要设定在login后出现-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -136,20 +142,20 @@
       </ul>
     </div>
   </nav>
-
-  <div><button style="position:relative; left:50px" ;>this is a button</button></div>
-  <	<div class="shop">
-      <div class="title">简易购物车</div>
-      <div class="goods">商品</div>
-      <div class="price">单价</div>
-      <div class="number">数量</div>
-      <div class="subtotal">小计</div>
-      <div class="delete">操作</div>
+  <div><button type="button" class="btn btn-primary" type="submit" style="position:absolute; left:10%; bottom: 50%;";>Process to Payment</button></div>
+    
+  <div class="shop">
+      <div class="title">Cart</div>
+      <div class="goods">Item(s)</div>
+      <div class="price">Price</div>
+      <div class="number">Quantity</div>
+      <div class="subtotal">Subtotal</div>
+      <div class="delete"></div>
     </div>
     <!--商品内容-->
     <div class="shop2" id="shop2">
       <form>
-      <div class="goods">小米MIX </div>
+      <div class="goods">SamSung </div>
       <div class="price" id="price2">5000</div>
       <div class="number">
         <input type="button" value="-" onclick="minus('text2','price2','subtotal2')"/>
@@ -157,12 +163,13 @@
         <input type="button" value="+" onclick="add('text2','price2','subtotal2')"/>
       </div>
       <div class="subtotal" id="subtotal2">5000</div>
-      <div class="delete" onclick="delect('shop2')"><a href="#">删除</a></div>
+      <div class="delete" onclick="remove('shop2')"><a href="#">delete</a></div>
       <form>
     </div>
+
     <div class="shop2" id="shop3">
       <form>
-      <div class="goods">iphone 8 </div>
+      <div class="goods">iphone 8</div>
       <div class="price" id="price3">6000</div>
       <div class="number">
         <input type="button" value="-" onclick="minus('text3','price3','subtotal3')"/>
@@ -170,8 +177,8 @@
         <input type="button" value="+" onclick="add('text3','price3','subtotal3')"/>
       </div>
       <div class="subtotal" id="subtotal3">5000</div>
-      <div class="delete" onclick="delect('shop3')"><a href="#">删除</a></div>
+      <div class="delete" onclick="remove('shop3')"><a href="#">delete</a></div>
       <form>
-    </div>
-
+    </div> 
+</body>
 </html>

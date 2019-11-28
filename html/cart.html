@@ -72,6 +72,9 @@
       var price=document.getElementById(price).innerHTML;
       // debug why the add function didn work--> var subtotal=price*num;
       document.getElementById(subtotal).innerHTML=price*num;
+      ordertotal()
+      tax()
+      total()
     }
 
     //-function
@@ -91,13 +94,16 @@
       // num=document.getElementById(text).value;
       var pricea=document.getElementById(price).innerHTML;
       document.getElementById(subtotal).innerHTML=pricea*num;
+      ordertotal()      
+      tax()
+      total()
     }
-    
+
     //while user selects the quantity and tries to change it.
     function change(text,price,subtotal){
       //judge if the input is valid
        var test = document.getElementById(text).value;
-      if(isNaN(test)||test<0||test%1 !== 0){
+      if(isNaN(test) || test < 0 ||test % 1 !== 0){
         alert("Please enter a number");
         document.getElementById(text).value=1;
       }
@@ -107,7 +113,12 @@
       var price=document.getElementById(price).innerHTML;
       //change the subtotal
       document.getElementById(subtotal).innerHTML=price*num;
+      ordertotal()
+      tax()
+      total()
+
     }
+
     function remove(shop){
       //delete the sepecifiy shop
       document.body.removeChild(document.getElementById(shop));
@@ -116,12 +127,30 @@
     function ordertotal(){
       var sum = document.getElementById('ordertotal');
       var sub = document.getElementsByClassName("subtotal");
-      console.log(sub[1]);
+      
       var suba=sub[1].innerText;
       var subb=sub[2].innerText;
 
-       sum.innerHTML = suba + subb; 
+       sum.innerHTML = suba*1 + subb*1; 
     }
+
+    // calculating the Provincial Sales Tax(PST)
+    function tax(){
+      var sum = document.getElementById('ordertotal');
+      console.log(sum.innerHTML);
+      var tax = sum.innerHTML*1*0.12;
+      console.log(tax);
+      // toFixed(n) keeps n bits decimal
+      document.getElementById('tax').innerHTML=tax.toFixed(2);
+    }
+
+    function total(){
+      var sum = document.getElementById('ordertotal').innerHTML;
+      var tax = document.getElementById('tax').innerHTML;
+      document.getElementById('total').innerHTML= (sum*1+tax*1).toFixed(2);
+    }
+
+
     // function ordertax(){
     //   var sum = document.get
     // }
@@ -167,28 +196,28 @@
     <!--商品内容-->
     <div class="shop2" id="shop2">
       <form>
-      <div class="goods">SamSung </div>
-      <div class="price" id="price2">5000</div>
+      <div class="goods">Coffee </div>
+      <div class="price" id="price2">3</div>
       <div class="number">
         <input type="button" value="-" onclick="minus('text2','price2','subtotal2')"/>
         <input type="text" value="1" class="text" id="text2" onblur="change('text2','price2','subtotal2')"/>
         <input type="button" value="+" onclick="add('text2','price2','subtotal2')"/>
       </div>
-      <div class="subtotal" id="subtotal2">5000</div>
+      <div class="subtotal" id="subtotal2">3</div>
       <div class="delete" onclick="remove('shop2')"><a href="#">delete</a></div>
       <form>
     </div>
 
     <div class="shop2" id="shop3">
       <form>
-      <div class="goods">iphone 8</div>
-      <div class="price" id="price3">6000</div>
+      <div class="goods">Burger</div>
+      <div class="price" id="price3">8</div>
       <div class="number">
         <input type="button" value="-" onclick="minus('text3','price3','subtotal3')"/>
         <input type="text" value="1" class="text" id="text3" onblur="change('text3','price3','subtotal3')"/>
         <input type="button" value="+" onclick="add('text3','price3','subtotal3')"/>
       </div>
-      <div class="subtotal" id="subtotal3">6000</div>
+      <div class="subtotal" id="subtotal3">8</div>
       <div class="delete" onclick="remove('shop3')"><a href="#">delete</a></div>
       <form>
     </div> 
@@ -196,12 +225,14 @@
       <form>
       <div>Subtotal: <span id="ordertotal"></span></div>
       <div>Tax: <span id="tax"></span></div>
-      <div>Deliver: <span id="deliverfee"></span></div>
+      <div>Deliver: <span id="deliverfee">under construction</span></div>
       <div>Order Total: <span id="total"></span></div>
     </form>
     </div>
     <script>
-      ordertotal()
+       ordertotal();
+       tax();
+       total();
     </script>
 </body>
 </html>

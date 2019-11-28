@@ -1,15 +1,16 @@
 body{
   height:667px;
-  width:375px;  
-  display:grid;
-  grid-template-rows: 25% 25% 25% 25%;
+  width:375px; 
   background-color: #FFFFF0;
   border:solid;
+  display:grid;
+  grid-template-rows: 25% 25% 25% 25%;
 }
 header{
+  grid-row: 1/2;
   margin: 0px;
   padding: 0px;
-  background-color:white;
+  background-color:#FFFFF0;
   width:375px;
 }
 #hTable{
@@ -38,4 +39,61 @@ margin-left:12%}
   height:30px;
   align-content: center;
 }
+.recommendation{
+  text-align: center;
+  margin-top:28%;
+}
 
+#recipe{
+  font-size: 8pt;
+  text-align: center;
+  border:solid 1px;
+  border-color: brown;
+  width:100%;
+}
+
+#displayArea {
+  color: brown;
+  height:60px;
+  width: 100%;
+}
+
+#morning{
+  margin-left:17px;
+  height:60px;
+  font-size:11pt;
+  text-align: center;
+}
+
+.menuBody{
+  grid-row:2/4;
+}
+#burgersTable{
+  grid-row:2/3;
+  width:80%;
+  height:50%;
+  margin-left: 2px;
+}
+#drinksTable{
+  grid-row:3/4;
+  width:80%;
+  height:50%;
+  margin-left: 2px;
+}
+.foodImg{
+  width:180px;
+  height:108px;
+  padding:0px;
+}
+#terms{
+  height:auto;
+  width:100%;
+  grid-row:4/5;
+  margin-top:20%;
+  text-align: center;
+}
+#twoMeals{
+  margin-left:0px;
+  margin-top:2%;
+  float:left;
+}

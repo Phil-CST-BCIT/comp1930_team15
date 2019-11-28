@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <title>Home Page</title>
     <meta charset="utf-8" meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
-        #loginMenu {position: fixed; top:50%; left:50%;  margin-top: -50px; 
-            margin-left:-100px;width: 200px;}
+      #loginMenu {position: fixed; top:50%; left:50%;  margin-top: -50px; 
+      margin-left:-100px;width: 200px;}
     </style>
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <!-- 
@@ -19,6 +19,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Optional styles and scripts of your own -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script> -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
@@ -41,39 +45,32 @@
     // Initialize Firebase
     
     firebase.initializeApp(firebaseConfig);
-      var db = firebase.firestore();
+    var db = firebase.firestore();
   </script>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script> -->
   <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script> -->
-
-  <!-- The Firebase Authentication UI Library -->
-  <!-- <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script> -->
-
-  <!-- This is the configuration that connects my web files to my firebase project -->
-  <!-- <script src="./Scripts/firebase_config_Ciro.js"></script> -->
-  <!-- <script>var firebaseConfig = {
-    
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script> -->
+    <!-- The Firebase Authentication UI Library -->
+    <!-- <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+      <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script> -->
+    <!-- This is the configuration that connects my web files to my firebase project -->
+    <!-- <script src="./Scripts/firebase_config_Ciro.js"></script> -->
+    <!-- <script>var firebaseConfig = {
       // Your API stuff goes here;  get it from firebase console
       
-    };
-    
-    // Initialize Firebase
-    // Henceforce, any reference to the database can be made with "db"
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();</script> -->
-
-</head>
-
-<body style="background-color:antiquewhite">
-<!-- navigation bar 下拉菜单menu login logout需要设定在login后出现-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      };
+      
+      // Initialize Firebase
+      // Henceforce, any reference to the database can be made with "db"
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();</script> -->
+  </head>
   
+<<<<<<< HEAD
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button><img align='center' id="logo" src="../images/Appname.png"/>
@@ -105,19 +102,20 @@
 </div>
     </form> -->
     
+
     <!-- Button trigger modal
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
-  Log-i11n
-</button> -->
-<div class="card" style="width: 11rem; margin-left: 0%; margin-top:35%;float:left">
-    <img class="card-img-top" src="../images/starbucks-coffee-icon-logo-png_44610.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Starbucks</h5>
-      <p class="card-text">One person, one cup and one neighborhood at a time.</p>
-      <a href="#" class="btn btn-primary">yep</a>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+        Log-i11n
+      </button> -->
+    <div class="card" style="width: 11rem; margin-left: 0%; margin-top:20%;float:left">
+      <img class="card-img-top" src="../images/starbucks-coffee-icon-logo-png_44610.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Starbucks</h5>
+        <p class="card-text">One person, one cup and one neighborhood at a time.</p>
+        <a href="#" class="btn btn-primary">yep</a>
+      </div>
     </div>
-  </div>
-  <div class="card" style="width: 11rem; height:402px;margin-left: 5%; margin-top:35%; float:left">
+    <div class="card" style="width: 11rem; height:402px;margin-left: 5%; margin-top:20%; float:left">
       <img class="card-img-top" src="../images/Tim.png" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Tim Hortons</h5>
@@ -125,6 +123,7 @@
         <a href="#" class="btn btn-primary" style="margin-top:25px">yep</a>
       </div>
     </div>
+
     
 
 <!-- Modal what is this??-->
@@ -142,12 +141,35 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
+
+    <!-- Modal what is this-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</div>
 
-        <script>
+    <script>
+      function log(){ window.location.href="../comp1930_team15/login/login.html";
+      }
+    </script>
+
+    <script>
     function log(){ window.location.href="../comp1930_team15/login/login.html";
     }</script>
      <script>
@@ -159,25 +181,23 @@
         </script>
          
     <!-- <script>
-    function createUser() {
-
-// if the current user logged in user
-// is authenticated, then grab "uid" "displayName" and "email"
-// use "set()" with merge (if document did not exist it will be created)
-firebase.auth().onAuthStateChanged(function(user){
-  console.log(user);
-    db.collection("User").doc(User.uid).set(
-  {
-    "Username":user.displayName, 
-     "Email":user.email,
-    },{ merge: true });
-});
-}
-
-    createUser();
-
-    </script> -->
-
-</body>
-
+      function createUser() {
+      
+      // if the current user logged in user
+      // is authenticated, then grab "uid" "displayName" and "email"
+      // use "set()" with merge (if document did not exist it will be created)
+      firebase.auth().onAuthStateChanged(function(user){
+      console.log(user);
+      db.collection("User").doc(User.uid).set(
+      {
+      "Username":user.displayName, 
+       "Email":user.email,
+      },{ merge: true });
+      });
+      }
+      
+      createUser();
+      
+      </script> -->
+  </body>
 </html>

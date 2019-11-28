@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome Back!</title>
+    <link rel="stylesheet" href="../team15_style.css">
+    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBlz3AEgN7deWD9SUjmIBUttZEqSiu_faE",
+        //make sure only pointing to one base
+        authDomain: "demooct31.firebaseapp.com",
+        databaseURL: "https://demooct31.firebaseio.com",
+        projectId: "demooct31",
+        storageBucket: "demooct31.appspot.com",
+        messagingSenderId: "338087132574",
+        appId: "1:338087132574:web:ad3cb0470ba5ba2d53ea8f"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+    </script>
+    
+<!--
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+-->
+    
+    <link rel="stylesheet" type="text/css" href="../style_sheet/drinks_starbucks_menu.css"/>
+  </head>
+  <body>
+    <header>
+      <table id="hTable">
+        <tbody>
+          <tr>
+            <td id="dropDownMenu"><img id="hamburger" src="../images/hamburger1.png"></td>
+            <td id="appNameTD"><img id="appName" src="../images/Appname.png"></td>
+            <td id="logo"><img id="logoImg" src="../images/logo.jpg"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <ul id="twoMeals">
+          <li><a id="getBreakfast" href="">Breakfast</a></li>
+          <li><a id="getLunch" href="">Lunch</a></li>
+          <li><a id="getMyInformation" href="">History</a></li>
+        </ul>
+      </div>
+      <div><p class="recommendation">Recommendation to you!</p></div>
+    </header>
+    <div class="menuBody">
+      <table id="burgersTable">
+        <tbody>
+          <td id="bigMac"><img class="foodImg" alt="" src="../images/big_mac.jpg"></td>
+          <td id="nuggets"><img class="foodImg" alt="" src="../images/chicken.jpg"></td>
+        </tbody>
+      </table>
+      <table id="drinksTable">
+        <tbody>
+          <td id="tea"><img class="foodImg" alt="" src="../images/tea.jpg"></td>
+          <td id="salad"><img class="foodImg" alt="" src="../images/salad.jpg"></td>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <div id="displayArea"></div>
+      <table id="terms">
+        <tbody>
+          <tr>
+            <td>Privacy Policy </td>
+            <td>Terms&#38Conditions </td>
+            <td>Accessibility</td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/drinks_client.js"></script>
+  </body>
+</html>

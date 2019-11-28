@@ -112,6 +112,19 @@
       //delete the sepecifiy shop
       document.body.removeChild(document.getElementById(shop));
     }
+
+    function ordertotal(){
+      var sum = document.getElementById('ordertotal');
+      var sub = document.getElementsByClassName("subtotal");
+      console.log(sub[1]);
+      var suba=sub[1].innerText;
+      var subb=sub[2].innerText;
+
+       sum.innerHTML = suba + subb; 
+    }
+    // function ordertax(){
+    //   var sum = document.get
+    // }
     </script>
 </head>
 
@@ -175,16 +188,20 @@
         <input type="text" value="1" class="text" id="text3" onblur="change('text3','price3','subtotal3')"/>
         <input type="button" value="+" onclick="add('text3','price3','subtotal3')"/>
       </div>
-      <div class="subtotal" id="subtotal3">5000</div>
+      <div class="subtotal" id="subtotal3">6000</div>
       <div class="delete" onclick="remove('shop3')"><a href="#">delete</a></div>
       <form>
     </div> 
-    <div style="clear: both; position: fixed; top:30%"><form>
-      <div>Subtotal<span ></span></div>
-      <div>Tax</div>
-      <div>Deliver</div>
-      <div>Order Total</div>
-      <div></div>
-    </form></div>
+    <div style="clear: both; position: fixed; top:30%">
+      <form>
+      <div>Subtotal: <span id="ordertotal"></span></div>
+      <div>Tax: <span id="tax"></span></div>
+      <div>Deliver: <span id="deliverfee"></span></div>
+      <div>Order Total: <span id="total"></span></div>
+    </form>
+    </div>
+    <script>
+      ordertotal()
+    </script>
 </body>
 </html>

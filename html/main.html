@@ -3,29 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>you have logged-in now!</title>
-    <style>
-      body{
-      background-image: url("../images/2560x1440-ivory-background.jpg"); background-repeat:repeat;
-      }
-      #header{
-      color:brown;
-      font-weight:bold;
-      font-size: 150%;
-      }
-    </style>
+    <link rel="stylesheet" href="../team15_style.css">
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBlz3AEgN7deWD9SUjmIBUttZEqSiu_faE",
+        authDomain: "demooct31.firebaseapp.com",
+        databaseURL: "https://demooct31.firebaseio.com",
+        projectId: "demooct31",
+        storageBucket: "demooct31.appspot.com",
+        messagingSenderId: "338087132574",
+        appId: "1:338087132574:web:ad3cb0470ba5ba2d53ea8f"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+      
+      
+    </script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="header">Welcome to you!</div>
+      <div class="header"><span id="you"></span> Welcome!</div>
       <a class="navbar-brand" href="#!"><img src="../images/logo.jpg" width="70px"></a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -33,7 +47,7 @@
             <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">Logged-in</a>
+            <a class="nav-link" id="logged-in" href="#!">Logged-in</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#!">Logout</a>
@@ -41,12 +55,23 @@
           <li class="nav-item">
             <a class="nav-link" href="#!">my account</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              <div><span id="email"></span></div>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
     <div class="float-sm-left"><img src="../images/starbucks-coffee-icon-logo-png_44610.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
+    <div class="float-sm-left"><img src="../images/tim.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
     <div class="float-sm-left"><img src="../images/starbucks-coffee-icon-logo-png_44610.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
-    <div class="float-sm-left"><img src="../images/starbucks-coffee-icon-logo-png_44610.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
-    <div class="float-sm-left"><img src="../images/starbucks-coffee-icon-logo-png_44610.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
+    <div class="float-sm-left"><img src="../images/tim.png" ult="starbucks" width="100px" height="100px"/>Starbucks coffee</div>
+    <scrpit src="scprits_phil/app.js"></scrpit>
+    <script src="scprits_phil/create_user.js"></script>
+    <script>
+      createUser();
+      showName();
+    </script>
   </body>
 </html>

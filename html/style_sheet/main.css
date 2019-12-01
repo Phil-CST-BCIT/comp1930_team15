@@ -1,0 +1,160 @@
+body{
+  height:667px;
+  width:375px; 
+  background-color: #FFFFF0;
+  border:solid;
+  display:grid;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+header{
+  grid-row: 1/2;
+  margin: 0px;
+  padding: 0px;
+  background-color:#FFFFF0;
+  width:375px;
+}
+#hTable{
+  width:100%;
+  margin-left: 0%;
+  margin-top:2%;
+}
+#appName{
+margin-left:12%}
+
+.dropdown{
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  color: white;
+  padding: 0px;
+  cursor: pointer;
+  margin-top:-5px;
+  border:solid 1px grey;
+  border-radius:20%;
+}
+/* Hidden */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links  */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change background color of the dropdown button when content is shown */
+.dropdown:hover .dropbtn {
+  background-color: white;
+}
+
+#logo{
+  margin-left:85%;
+  margin-top: 0%;
+}
+
+#logoImg{
+  width:30px;
+  height:30px;
+  align-content: center;
+}
+.recommendation{
+  text-align: center;
+  margin-top:3%;
+}
+
+#recipe{
+  font-size: 8pt;
+  text-align: center;
+  border:solid 1px;
+  border-color: brown;
+  width:100%;
+}
+#morning{
+  margin-left:17px;
+  height:60px;
+  font-size:11pt;
+  text-align: center;
+}
+
+.menuBody{
+  grid-row:2/4;
+}
+#burgersTable{
+  grid-row:2/3;
+  width:80%;
+  height:50%;
+  margin-left: 32px;
+}
+#drinksTable{
+  grid-row:3/4;
+  width:80%;
+  height:50%;
+  margin-left: 32px;
+}
+.foodImg{
+  width:150px;
+  height:90px;
+  padding:0px;
+}
+#terms{
+  position:sticky;
+  top:90%;
+  height:auto;
+  width:100%;
+  grid-row:4/5;
+  text-align: center;
+}
+#twoMeals{
+  margin-left:0px;
+  margin-top:2%;
+}
+
+div:hover {
+  border: 1px solid none;
+}
+
+div.desc {
+  padding: 5px;
+  text-align: center;
+}
+footer .starbucksTable{
+  grid-row:4/5;
+  width:80%;
+  height:50%;
+  margin-left: 40px;
+}
+.starImg{
+  width:100px;
+  height:120px;
+  padding:0px;
+  margin-top:-22%;
+  margin-left:20px;
+}
+
+#starbucksMenu{
+  margin-top:20%;
+  margin-left:50px;
+}
+
+.tnImg{
+  height:100px;
+  width:64px;
+}

@@ -6,7 +6,7 @@ function createUser() {
     // is authenticated, then grab "uid" "displayName" and "email"
     // use "set()" with merge (if document did not exist it will be created)
     firebase.auth().onAuthStateChanged(function(user){
-        db.collection("people").doc(User.uid).set(
+        db.collection("User").doc(user.uid).set(
     	{
         "Username":user.displayName, 
          "Email":user.email,

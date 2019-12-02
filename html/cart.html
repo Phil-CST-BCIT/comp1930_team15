@@ -137,9 +137,9 @@
     // calculating the Provincial Sales Tax(PST)
     function tax(){
       var sum = document.getElementById('ordertotal');
-      console.log(sum.innerHTML);
+      
       var tax = sum.innerHTML*1*0.12;
-      console.log(tax);
+      
       // toFixed(n) keeps n bits decimal
       document.getElementById('tax').innerHTML=tax.toFixed(2);
     }
@@ -149,8 +149,6 @@
       var tax = document.getElementById('tax').innerHTML;
       document.getElementById('total').innerHTML= (sum*1+tax*1).toFixed(2);
     }
-
-
     // function ordertax(){
     //   var sum = document.get
     // }

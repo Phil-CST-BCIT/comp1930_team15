@@ -1,26 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Drinks Starbucks</title>
-  <link rel="stylesheet" href="../style_sheet/drinks_starbucks_menu.css">
-  </head>  
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome Back!</title>
+    <link rel="stylesheet" href="./style_sheet/main.css">
+    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script>
+      var db = firebase.firestore();
+    </script>
+    <!--
+      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+      -->
+  </head>
   <body>
     <header>
       <table id="hTable">
         <tbody>
-      <tr>
-        <td id="dropDownMenu"><img id="hamburger" src="../images/hamburger1.png"></td>
-        <td id="appNameTD"><img id="appName" src="../images/Appname.png"></td>
-        <td id="logo"><img id="logoImg" src="../images/logo.jpg"></td>
-        </tr>
+          <tr>
+            <td>
+              <div class="dropdown">
+                <button class="dropbtn"><img src="./images/hamburger1.png" alt="" width="20px" height="20px'"></button>
+                <div class="dropdown-content">
+                  <a href="#">Login</a>
+                  <a href="#">Logout</a>
+                  <a href="#">About</a>
+                </div>
+              </div>
+            <td id="appNameTD"><img id="appName" src="./images/Appname.png"></td>
+            <td id="logo"><img id="logoImg" src="./images/logo.jpg"></td>
+          </tr>
         </tbody>
       </table>
+      <div>
+        <ul id="twoMeals">
+          <li><a id="getBreakfast" href="">Breakfast</a></li>
+          <li><a id="getLunch" href="">Lunch</a></li>
+          <li><a id="getMyInformation" href="">History</a></li>
+          <li><a id="cart" href="./cart.html">Go to cart</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="recommendation">Starbucks Menu!</p>
+      </div>
     </header>
-    
-    <div class="menuBody"> </div>
-    <footer></footer>
-    
+    <div class="menuBody">
+      <table id="starbucksMenu">
+        <tbody>
+          <td id="tea">
+            <a target="_blank" href="">
+            <img src="./images/true-north.png" class="tnImg" alt="" height="200px">
+            </a>
+            <div class="desc">Dark</div>
+          </td>
+        </tbody>
+        <tbody>
+          <td id="tea">
+            <a target="_blank" href="">
+            <img src="./images/cold-brew.jpg" class="tnImg" alt="" height="200px">
+            </a>
+            <div class="desc">Cold Brew</div>
+          </td>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <table id="terms">
+        <tbody>
+          <tr>
+            <td>Privacy Policy </td>
+            <td>Terms&#38Conditions </td>
+            <td>Accessibility</td>
+          </tr>
+        </tbody>
+      </table>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="starbucks.js"></script>
   </body>
-  
 </html>

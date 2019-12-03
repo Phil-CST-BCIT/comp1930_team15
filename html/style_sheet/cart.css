@@ -1,10 +1,6 @@
-* {
-	margin: 0;
-	padding: 0;
-}
 
 .container {
-	width: 500px;
+	width: 400px;
 	margin: 0 auto;
 }
 
@@ -13,12 +9,13 @@ h1 {
 }
 
 h3 {
-	margin: 20px 0;
+	margin: 0px 0;
 }
 
 table {
 	border-collapse: collapse;
-	width: 500px;
+	width: 300px;
+	height: 100px;
 	margin-top: 10px;
 	text-align: center;
 }
@@ -66,15 +63,22 @@ table tbody input {
 }
 
 h2 {
-	float: right;
-	padding: 20px;
+	
+	
+	padding: 30px;
 }
 
 h2.hide {
 	display: none;
 }
 
+#total{
+	
+	font:10px;
+}
+
+
 h2 span {
-	font: bold 23px/33px "微软雅黑";
+	font: bold 23px/13px "微软雅黑";
 	color: blue;
 }

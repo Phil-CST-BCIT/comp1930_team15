@@ -66,6 +66,9 @@ for(var i = 0, len = cks.length; i < len; i++) {
 	}
 }
 
+
+
+
 /*全选实现*/
 allCheck.onchange = function() {
 	if(this.checked) {

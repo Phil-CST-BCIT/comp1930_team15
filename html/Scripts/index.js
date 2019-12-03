@@ -59,3 +59,11 @@ for(var i = 0, len = btns.length; i < len; i++) {
 		ccount.innerHTML = getTotalCount();
 	}
 }
+
+// go back to the previous page
+function goback(){
+	history.go(-1);
+   }
+//    function go(){
+//    history.go(1);
+//    }

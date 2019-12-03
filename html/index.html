@@ -71,21 +71,21 @@
       const db = firebase.firestore();</script> -->
   </head>
     <body style="background-color: ivory;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button><img id="logo" style="position: absolute; left:20%" src="./images/Appname.png"/>
-      <a class="navbar-brand" href="#!"><img src="./images/logo.jpg" width="40px" height="40px"></a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button><img id="logo" style="position: absolute; left:20%" src="./images/Appname.png"/>
+        <a class="navbar-brand" href="../html/index.html"><img src="./images/logo.jpg" width="40px" height="40px"></a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a> -->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./login.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">Logout</a>
+            <a class="nav-link" href="#!" style="display: none;" onclick="">Logout</a>
           </li>
         </ul>
       </div>
@@ -123,7 +123,7 @@
       <div class="card-body">
         <h5 class="card-title">Starbucks</h5>
         <p class="card-text">One person, one cup and one neighborhood at a time.</p>
-        <a href="#" class="btn btn-primary">under construction</a>
+        <a href="../html/MenuA.html" class="btn btn-primary">Menu</a>
       </div>
     </div>
     <div class="card" style="width: 11rem; height:402px;margin-left: 5%; margin-top:20%; float:left">
@@ -131,7 +131,7 @@
       <div class="card-body">
         <h5 class="card-title">Tim Hortons</h5>
         <p class="card-text">Always fresh, always tim horton's </p>
-        <a href="#" class="btn btn-primary" style="margin-top:25px">under construction</a>
+        <a href="../html/MenuB.html" class="btn btn-primary" style="margin-top:25px" >Menu</a>
       </div>
     </div>
 
@@ -161,6 +161,14 @@
     <script>
     function log(){ window.location.href="../comp1930_team15/login/login.html";
     }</script>
+    <script>
+        function goback(){
+         history.go(-1);//返回或者history.back();
+        }
+        function go(){
+        history.go(1);//前进或者history.forward();
+        }
+        </script>
      <script>
       firebase.auth().onAuthStateChanged(function (user) {
         db.collection('User').doc(user.uid).onSnapshot(function(snap){
@@ -168,6 +176,7 @@
          });
     });
         </script>
+        <script></script>
     <!-- <script>
       function createUser() {
       

@@ -2,17 +2,63 @@
 <html>
 
 	<head>
-		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Cart</title>
+		<!--meta sepc -->
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
+		<!--bootstrap css -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<!--boostrap js-->
+		<scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" type="text/javascript"></scrip>
+
 		<link rel="stylesheet" type="text/css" href="../html/style_sheet/cart.css" />
 		<!--cookie js-->
 		<script type="text/javascript" src="../html/Scripts/cookie.js"></script>
+		
 	</head>
 
 	<body style="background-color: ivory;">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+					Launch demo modal
+				  </button>
+				  
+				  <!-- Modal backup 備用素材 -->
+				  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+						  This is so good.
+						</div><div class="modal-body">
+								I love bootstrap
+							  </div><div class="modal-body">
+								  點解點解點解點解點解
+								  </div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						  <button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					  </div>
+					</div>
+				  </div>
+
+
+
+
+
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon" onclick="goback()"></span>
+					</button><img align='center'id="logo"  src="./images/Cart.png" width='100px'/>
+					<a class="navbar-brand" href="#!"><img src="./images/logo.jpg" width="40px" height="40px"></a></h1>
 		<div class="container">
-			<h1>Cart</h1>
+
 			<h3><a href="MenuA.html">Continue Shopping</a></h3>
 			<table id="table" border="1" cellspacing="0" cellpadding="0" class="hide">
 				<thead>
@@ -66,11 +112,23 @@
 				</tbody>
 			</table>
 			<div class="box" id="box">Your cart is currently empty</div>
-			<h2 id="h2" class="">Total Price：￥<span id="totalPrice">0</span></h2>
+			<h2 id="h2" class=""><span id="total">Total Price：￥</span><span id="totalPrice">0</span></h2>
 		</div>
-		<script src="../html/Scripts/server.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script type="text/javascript" src="../html/Scripts/server.js"></script>
 		<!-- js of cart menu-->
 		<script src="../html/Scripts/cart.js"></script>
+		<!-- auto click the checkall box to activate the total price-->
+		<script> var click = document.getElementById('allCheck');
+		click.click();
+		</script>
+		<script>
+			function goback(){
+			history.go(-1);
+   		}
+		</script>
+		
 	</body>
 
 </html>

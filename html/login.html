@@ -32,12 +32,13 @@
       };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
       </script>
   </head>
   <body>
       <!-- The surrounding HTML is left untouched by FirebaseUI.
         Your app may use that space for branding, controls and other customizations.-->
-      <h1 id="loginTitle">Welcome to Team 15 Web App</h1>
+      <h1 id="loginTitle"><img src="../html/images/Welcome.png"></h1>
       <div id="firebaseui-auth-container"></div>
       <div id="loader">Loading...</div>
       <script>
@@ -45,6 +46,7 @@
         var ui = new firebaseui.auth.AuthUI(firebase.auth()); 
         var uiConfig = { callbacks: {
         signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+          
           // User successfully signed in.
           // Return type determines whether we continue the redirect automatically
           // or whether we leave that to developer to handle.
@@ -53,10 +55,13 @@
         uiShown: function() {
           // The widget is rendered.
           // Hide the loader.
+          
           document.getElementById('loader').style.display = 'none';
         }
         },
         // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+
+        
         signInFlow: 'popup',
         signInSuccessUrl: 'index.html',
         signInOptions: [
@@ -99,6 +104,7 @@
                     document.getElementById('loader').style.display = 'none';
                 }
             },
+            credentialHelper:firebaseui.auth.CredentialHelper.NONE,
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
             signInSuccessUrl: 'index.html',
@@ -123,8 +129,11 @@
       <script>
          function createUser() {
             
+           
+
              firebase.auth().onAuthStateChanged(function(user){
-                
+              
+
                  db.collection("User").doc(user.uid).set(
              	{
                  "username":user.displayName,
@@ -132,6 +141,7 @@
                  },{ merge: true });
              });
         }
+        createUser();
         // createUser();
       </script>
   </body>

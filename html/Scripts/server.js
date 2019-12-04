@@ -58,7 +58,7 @@ function updateObjById(id, num) {
 			break;
 		}
 	}
-	return updateData(listObj)
+	return updateData(listObj);
 }
 
 /*

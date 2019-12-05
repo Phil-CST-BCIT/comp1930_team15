@@ -90,7 +90,7 @@
         </ul>
       </div>
     </nav>
-    <!-- 旧的中心按钮表格 <form>
+    <!-- 舊的中心按鈕bootstrap <form>
       <div class="btn-group-vertical" role="group" aria-label="Basic example">
           <div id="loginMenu">
               
@@ -163,10 +163,10 @@
     }</script>
     <script>
         function goback(){
-         history.go(-1);//返回或者history.back();
+         history.go(-1);//返回上一級;
         }
         function go(){
-        history.go(1);//前进或者history.forward();
+        history.go(1);//前進上一級history.forward();
         }
         </script>
      <script>
@@ -179,10 +179,13 @@
         </script>
         <script>function logout(){
           firebase.auth().signOut();
-          console.log("cc");
+          window.location.href='../html/login.html'
+
+          console.log("to be debugged");
           
           
         }</script>
+        
     <!-- <script>
       function createUser() {
       

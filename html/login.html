@@ -89,22 +89,22 @@
         ui.start('#firebaseui-auth-container', uiConfig);
       </script>
       <script>
-         function createUser() {
+        //  function createUser() {
             
            
 
-             firebase.auth().onAuthStateChanged(function(user){
+        //      firebase.auth().onAuthStateChanged(function(user){
               
               
 
-                 db.collection("User").doc(user.uid).set(
-             	{
-                 "username":user.displayName,
-                  "Email":user.email,
-                 },{ merge: true });
-             });
-        }
-        createUser();
+        //          db.collection("User").doc(user.uid).set(
+        //      	{
+        //          "username":user.displayName,
+        //           "Email":user.email,
+        //          },{ merge: true });
+        //      });
+        // }
+        // createUser();
         // createUser();
       </script>
   </body>

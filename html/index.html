@@ -170,6 +170,23 @@
         }
         </script>
      <script>
+       function createUser() {
+            
+           
+
+            firebase.auth().onAuthStateChanged(function(user){
+             
+             
+
+                db.collection("User").doc(user.uid).set(
+              {
+                "username":user.displayName,
+                 "Email":user.email,
+                },{ merge: true });
+            });
+       }
+       createUser();
+       
       firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById('logout').style.display='contents';
         db.collection('User').doc(user.uid).onSnapshot(function(snap){

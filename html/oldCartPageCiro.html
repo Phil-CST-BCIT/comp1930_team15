@@ -102,18 +102,18 @@
 
     //while user selects the quantity and tries to change it.
     function change(text,price,subtotal){
-      //judge if the input is valid
-       var test = document.getElementById(text).value;
-      if(isNaN(test) || test < 0 ||test % 1 !== 0){
-        alert("Please enter a number");
-        document.getElementById(text).value=1;
+      //see if the input is valid
+       var quantity = document.getElementById(text).value;
+      if (isNaN(quantity) || quantity < 0 || quantity % 1 !== 0){
+        alert("Please enter a valid quantity");
+        document.getElementById(text).value = 1;
       }
       //get the field value
       var num=document.getElementById(text).value;
-      //get the price of price filed
+      //get the price of price field
       var price=document.getElementById(price).innerHTML;
       //change the subtotal
-      document.getElementById(subtotal).innerHTML=price*num;
+      document.getElementById(subtotal).innerHTML = price*num;
       ordertotal()
       tax()
       total()
@@ -139,7 +139,7 @@
     function tax(){
       var sum = document.getElementById('ordertotal');
       
-      var tax = sum.innerHTML*1*0.12;
+      var tax = sum.innerHTML*0.12;
       
       // toFixed(n) keeps n bits decimal
       document.getElementById('tax').innerHTML=tax.toFixed(2);
@@ -189,7 +189,7 @@
       <div class="goods">Item(s)</div>
       <div class="price">Price</div>
       <div class="number">Quantity</div>
-      <div class="subtotal">Subtotal</div>
+      <div class="subtotal">total</div>
       <div class="delete"></div>
     </div>
     <!--商品内容-->

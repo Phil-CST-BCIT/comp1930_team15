@@ -85,7 +85,7 @@
             <a class="nav-link" href="./login.html">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!" style="display: none;" onclick="">Logout</a>
+            <a id="logout"class="nav-link" href="#!" style="display: none;" onclick="logout()">Logout</a>
           </li>
         </ul>
       </div>
@@ -113,7 +113,7 @@
 </div>
     </form> -->
     
-
+    
     <!-- Button trigger modal
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
         Log-i11n
@@ -171,12 +171,18 @@
         </script>
      <script>
       firebase.auth().onAuthStateChanged(function (user) {
+        document.getElementById('logout').style.display='contents';
         db.collection('User').doc(user.uid).onSnapshot(function(snap){
              document.getElementById('username').innerHTML = user.displayName;
          });
     });
         </script>
-        <script></script>
+        <script>function logout(){
+          firebase.auth().signOut();
+          console.log("cc");
+          
+          
+        }</script>
     <!-- <script>
       function createUser() {
       

@@ -8,7 +8,7 @@
       <!-- The core Firebase JS SDK is always required and must be listed first -->
       <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
       <!-- Bootstrap for Mobile-first -->
-    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -41,47 +41,8 @@
       <h1 id="loginTitle"><img src="../html/images/Welcome.png"></h1>
       <div id="firebaseui-auth-container"></div>
       <div id="loader">Loading...</div>
-      <script>
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth()); 
-        var uiConfig = { callbacks: {
-        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-          
-          // User successfully signed in.
-          // Return type determines whether we continue the redirect automatically
-          // or whether we leave that to developer to handle.
-          return true;
-        },
-        uiShown: function() {
-          // The widget is rendered.
-          // Hide the loader.
-          
-          document.getElementById('loader').style.display = 'none';
-        }
-        },
-        // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-
-        
-        signInFlow: 'popup',
-        signInSuccessUrl: 'index.html',
-        signInOptions: [
-        // Leave the lines as is for the providers you want to offer your users.
-        // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        // firebase.auth.GithubAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        // firebase.auth.PhoneAuthProvider.PROVIDER_ID
-        ],
-        // Terms of service url.
-        tosUrl: 'index.html',
-        // Privacy policy url.
-        privacyPolicyUrl: 'index.html'
-        };
-        // The start method will wait until the DOM is loaded.
-        
-      </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+      
       <script>
         $("#loginTitle").css("textAlign","center");
         $("#loginTitle").css("color","#654321");
@@ -89,6 +50,7 @@
       </script>
       <script>
         // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth()); 
         // var ui = new firebaseui.auth.AuthUI(firebase.auth());
         var uiConfig = {
             callbacks: {
@@ -132,6 +94,7 @@
            
 
              firebase.auth().onAuthStateChanged(function(user){
+              
               
 
                  db.collection("User").doc(user.uid).set(

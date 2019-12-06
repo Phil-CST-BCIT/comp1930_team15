@@ -24,7 +24,7 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <!-- <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script> -->
     <!-- TODO: Add SDKs for Firebase products that you want to use
-    <!-- Add Firebase products that you want to use -->
+     Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
@@ -123,7 +123,7 @@
       <div class="card-body">
         <h5 class="card-title">Starbucks</h5>
         <p class="card-text">One person, one cup and one neighborhood at a time.</p>
-        <a href="../html/MenuA.html" class="btn btn-primary">Menu</a>
+        <a href="./MenuA.html" class="btn btn-primary">Menu</a>
       </div>
     </div>
     <div class="card" style="width: 11rem; height:402px;margin-left: 5%; margin-top:20%; float:left">
@@ -131,7 +131,7 @@
       <div class="card-body">
         <h5 class="card-title">Tim Hortons</h5>
         <p class="card-text">Always fresh, always tim horton's </p>
-        <a href="../html/MenuB.html" class="btn btn-primary" style="margin-top:25px" >Menu</a>
+        <a href="./MenuB.html" class="btn btn-primary" style="margin-top:25px" >Menu</a>
       </div>
     </div>
 
@@ -186,7 +186,7 @@
             });
        }
        createUser();
-       
+
       firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById('logout').style.display='contents';
         db.collection('User').doc(user.uid).onSnapshot(function(snap){

@@ -95,6 +95,7 @@ var ups = document.querySelectorAll(".up"); //select all add buttons
 var dels = document.querySelectorAll(".del"); //select all delete buttons
 // minus and add handler
 for(var i = 0, len = downs.length; i < len; i++) {
+	// minus one function and onclick listent in the loop
 	downs[i].onclick = function() {
 		// nextElementSibling searcher.
 		var txtObj = this.nextElementSibling;
@@ -114,7 +115,7 @@ for(var i = 0, len = downs.length; i < len; i++) {
 		totalPrice.innerHTML = getTotalPrice();
 
 	}
-
+	// add one function and onclick listener in the loop
 	ups[i].onclick = function() {
 		// previousElementSibling query searcher
 		var txtObj = this.previousElementSibling;
@@ -129,6 +130,7 @@ for(var i = 0, len = downs.length; i < len; i++) {
 		totalPrice.innerHTML = getTotalPrice();
 	}
 
+	// delete function and onclick listener in the loop
 	dels[i].onclick = function() {
 		var tr = this.parentNode.parentNode;
 		var pid = tr.getAttribute("pid")
@@ -148,7 +150,7 @@ for(var i = 0, len = downs.length; i < len; i++) {
 	}
 }
 
-//
+
 function checkAllChecked() {
 	var isSelected = true; //
 	for(var j = 0, len = cks.length; j < len; j++) {

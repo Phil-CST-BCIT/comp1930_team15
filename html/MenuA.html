@@ -3,17 +3,18 @@
 
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Menu</title>
+		<title>Starbucks Menu</title>
 		<!--bootstrap css -->
 		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<!--Menu css-->
 		<link rel="stylesheet" type="text/css" href="../html/style_sheet/menu.css" />
 		<scrip src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" type="text/javascript"></scrip>
-		<!--cookie操作的js库-->
+		<!--cookie js including the method to manage cookie-->
 		<script src="../html/Scripts/cookie.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body style="background-color: ivory;">
+		<!-- navigation bar -->
 			<h1><nav class="navbar navbar-expand-lg navbar-light bg-light">
 					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon" onclick="goback()"></span>
@@ -21,11 +22,12 @@
 					<a class="navbar-brand" href="../html/index.html"><img src="./images/logo.jpg" width="40px" height="40px"></a></h1>
 		<div class="container">
 			
-
+			<!-- This is div for items in the menu-->
 			<div class="mycar">
 				<a href="cart.html">My Cart</a><i id="ccount">0</i>
 			</div>
 			<div class="list">
+				<!-- item one with costomized pid-->
 				<dl pid="1001">
 					<dt>
 						<img src="../html/images/chicken.jpg" />
@@ -37,6 +39,7 @@
 						<button>+</button>
 					</dd>
 				</dl>
+				<!-- item one with costomized pid-->
 				<dl pid="1002">
 					<dt>
 						<img src="../html/images/big_mac.jpg" />
@@ -48,6 +51,7 @@
 						<button>+</button>
 					</dd>
 				</dl>
+				<!-- item one with costomized pid-->
 				 <dl pid="1003">
 					<dt>
 						<img src="../html/images/tea.jpg" />
@@ -59,6 +63,7 @@
 						<button>+</button>
 					</dd>
 				</dl>
+				<!-- item one with costomized pid-->
 				<dl pid="1004">
 					<dt>
 						<img src="../html/images/salad.jpg" />
@@ -70,6 +75,7 @@
 						<button>+</button>
 					</dd>
 				</dl>
+				<!-- item one with costomized pid-->
 				<dl pid="1005">
 					<dt>
 						<img src="../html/images/chai_latte.jpeg" />
@@ -81,6 +87,7 @@
 						<button>+</button>
 					</dd>
 				</dl>
+				<!-- item one with costomized pid-->
 				<dl pid="1006">
 					<dt>
 						<img src="../html/images/cold-brew.jpg" />
@@ -102,7 +109,7 @@
         	JS function for this page
         -->
 		<script type="text/javascript" src="../html/Scripts/index.js"></script>
-		<script>//testing server.js
+		<script>//testing server.js for demo presentation
 			testServer()</script>
 	</body>
 
